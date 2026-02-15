@@ -1,0 +1,21 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Speech Bubble -->
+  <path d="M50 60C50 48.954 58.954 40 70 40H130C141.046 40 150 48.954 150 60V100C150 111.046 141.046 120 130 120H85L65 135V120H70C58.954 120 50 111.046 50 100V60Z" 
+        fill="url(#logoGradient)"/>
+  
+  <!-- Three Dots (Typing Indicator) -->
+  <circle cx="80" cy="80" r="8" fill="white"/>
+  <circle cx="100" cy="80" r="8" fill="white"/>
+  <circle cx="120" cy="80" r="8" fill="white"/>
+  
+  <!-- Text "Convo" -->
+  <text x="100" y="175" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#1F2937" text-anchor="middle">Convo</text>
+</svg>
