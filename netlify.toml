@@ -2,3 +2,4 @@
   base = "client"
   command = "npm run build"
 
+ package = "@netlify/plugin-nextjs"
