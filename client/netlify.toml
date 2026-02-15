@@ -5,4 +5,7 @@
 [build.environment]
   NODE_VERSION = "18"
 
-
+[[redirects]]
+  from = "/*"
+  to = "/page.tsx"
+  status = 200
