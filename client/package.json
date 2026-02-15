@@ -1,6 +1,9 @@
 {
   "name": "convo-frontend",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "description": "Convo - Modern messaging application for seamless conversations",
   "private": true,
   "scripts": {
