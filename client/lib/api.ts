@@ -1,10 +1,12 @@
 import axios from 'axios';
 import { io } from 'socket.io-client';
 
-export const API_URL = 'http://localhost:5000/api';
-export const SOCKET_URL = 'http://localhost:5000';
+const BASE_API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+
+export const API_URL = `${BASE_API_URL}/api`;
+export const SOCKET_URL = BASE_API_URL;
 /** Base URL for building absolute file URLs (e.g. /api/files/xxx) */
-export const BASE_URL = 'http://localhost:5000';
+export const BASE_URL = BASE_API_URL;
 
 export const api = axios.create({
     baseURL: API_URL,

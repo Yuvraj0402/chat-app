@@ -13,7 +13,15 @@ require("dotenv").config({ path: path.join(__dirname, '.env') });
 
 const app = express();
 
-app.use(cors());
+// CORS Configuration - Allow frontend from Netlify and localhost
+const allowedOrigins = process.env.FRONTEND_URL
+    ? [process.env.FRONTEND_URL, "http://localhost:3000", "http://localhost:3001"]
+    : ["http://localhost:3000", "http://localhost:3001"];
+
+app.use(cors({
+    origin: allowedOrigins,
+    credentials: true
+}));
 app.use(express.json());
 
 mongoose
@@ -41,7 +49,7 @@ const server = app.listen(process.env.PORT, () =>
 
 const io = socket(server, {
     cors: {
-        origin: ["http://localhost:3000", "http://localhost:3001"], // allow both common react ports
+        origin: allowedOrigins,
         credentials: true,
     },
 });
