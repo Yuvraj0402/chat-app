@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { useState, useEffect } from 'react'
 import { logoutUser } from '@/lib/auth'
 import { useTheme } from '@/components/providers/ThemeProvider'
+import { API_URL } from '@/lib/api'
 
 export default function SettingsPage() {
   const router = useRouter()
@@ -25,7 +26,7 @@ export default function SettingsPage() {
           const userId = user.id || user._id
 
           // Using generic fetch for now
-          const response = await fetch(`http://localhost:5000/api/users/delete/${userId}`, {
+          const response = await fetch(`${API_URL}/users/delete/${userId}`, {
             method: 'DELETE',
           })
 

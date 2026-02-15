@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { io } from 'socket.io-client';
 
-const BASE_API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const BASE_API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://chat-app-7hcf.onrender.com';
 
 export const API_URL = `${BASE_API_URL}/api`;
 export const SOCKET_URL = BASE_API_URL;

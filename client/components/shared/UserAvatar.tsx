@@ -24,13 +24,13 @@ export default function UserAvatar({
     // Clean up BASE_URL handling. If avatarImage is a full URL, use it.
     // If it's a relative path (e.g., /api/files/...), prepend BASE_URL if needed, 
     // but usually standard img src works with relative if on same domain.
-    // However, api.ts says BASE_URL = http://localhost:5000. 
+    // However, api.ts says BASE_URL = https://chat-app-7hcf.onrender.com. 
     // If `avatarImage` coming from backend is `/api/files/xyz`, we might need full URL if frontend is on 3000.
 
     const getAvatarUrl = (path: string) => {
         if (path.startsWith('http')) return path
         // Remove leading slash if BASE_URL ends with one, or vice versa, to avoid double slashes
-        // But api.ts BASE_URL is 'http://localhost:5000' (no trailing slash).
+        // But api.ts BASE_URL is 'https://chat-app-7hcf.onrender.com' (no trailing slash).
         if (path.startsWith('/')) return `${BASE_URL}${path}`
         return `${BASE_URL}/${path}`
     }
